@@ -1,0 +1,23 @@
+
+<div class="form-container">
+
+    <p class="heading">Login </p>
+
+    <div class="alert alert-danger" *ngIf="formError">
+        <p>{{ errorMessage }} </p>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+        <input id="email" type="email" formControlName="email" placeholder="Enter Email Address *">
+
+        <input id="password" type="password" formControlName="password" placeholder="Enter Password *">
+
+        <button type="button" class="login" [disabled]="!loginForm.valid" (click)="onLogin()">Log In</button>
+    </form>
+    <div style="text-align: center" *ngIf="isFetching">
+        <app-loading-spinner></app-loading-spinner>
+    </div>
+    <hr>
+    <p class="signup">New User ?&nbsp;&nbsp;<a routerLink="/signup">Sign up for an account</a></p>
+</div>

@@ -1,0 +1,53 @@
+
+<div class="form-container">
+
+    <p class="heading">Register Here</p>
+
+    <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+        <img id="userPic" class="user-image" [src]="imageUrl" alt="Profile Image">
+
+        <div class="alert alert-danger" *ngIf="formError">
+            <p>An error occurred!</p>
+            <p>{{ formError.error.error.message == 'EMAIL_EXISTS' ? 'Email already exists!' : '' }}</p>
+        </div>
+        <div class="alert alert-success" *ngIf="userCreated">
+            User registered successfully!
+        </div>
+       
+        <input id="firstName" type="text" placeholder="First Name" formControlName="firstName">
+
+        <input id="lastName" type="text" placeholder="Last Name" formControlName="lastName">
+
+        <input id="email" type="email" placeholder="Email Address" formControlName="email">
+        <p class="error"
+            *ngIf="!signupForm.get('email').valid && (signupForm.get('email').dirty || signupForm.get('email').touched )">
+            Please enter a valid email address..!!
+        </p>
+
+        <input id="password" type="password" placeholder="Password" formControlName="password">
+        <p class="error"
+            *ngIf="!signupForm.get('password').valid && (signupForm.get('password').dirty || signupForm.get('password').touched )">
+            Password must be at least 6 characters long..!!</p>
+
+       
+        <input id="address" type="text" placeholder="Address" formControlName="address">
+
+        Gender :&nbsp;
+        <input type="radio" name="gender" value="male" formControlName="gender" [checked]="true"><label>Male</label>
+        <input type="radio" name="gender" value="female" formControlName="gender"><label>Female</label>
+        <input type="radio" name="gender" value="other" formControlName="gender"><label>Other</label>
+
+        <div class="profile-upload">
+            Upload Profile Image :<input id="profilePicture" type="file" accept="image/*" formControlName="profileImage"
+                (change)="UploadProfilePicture($event);">
+        </div>
+
+
+        <button type="submit" [disabled]="!signupForm.valid" class="btn-style">Sign Up</button>
+    </form>
+    <br>
+    <p class="login"> Already Existing User ?&nbsp;&nbsp;<a routerLink="/login">Login</a></p>
+    <div style="text-align: center;" *ngIf="isFetching">
+        <app-loading-spinner></app-loading-spinner>
+    </div>
+</div>

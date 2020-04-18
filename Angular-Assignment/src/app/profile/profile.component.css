@@ -1,0 +1,91 @@
+
+    
+* {
+    box-sizing: border-box;
+}
+
+.body-container{
+    margin: 0 auto;
+    text-align: center;
+    /* margin-top: 3%; */
+ }
+
+ .sidebar{
+  border:2px solid black;
+  margin: 0 auto;   
+  width: 600px;
+  text-align: center;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  background-color: rgb(75, 126, 180);
+ }
+ .user-image{
+  display: block;
+  margin: 0 auto;
+  height: 125px;
+  width: 125px;
+  margin-top: 3%;
+  border: 5px solid black;
+  border-radius: 100px;
+}
+
+.headingPersonalDetail{
+  padding: 5px;
+  font-size: 40px;
+  color: white;
+  /* margin: 1%; */
+}
+
+.left-side-div{
+  float: left;
+  line-height: 30px;
+  width: 50px;
+  padding-left: 60px;
+}
+
+
+.profileSpan{
+    
+    margin:4% 4%;
+    vertical-align: middle;
+    text-align: left;
+    opacity: 1;
+    margin-bottom: 10px; 
+    border: transparent;
+}
+.right-side-div{
+    float: right;
+    width: 300px;
+    }
+.profileSpan2{
+    width: 90%;
+    display: inline-block;
+    margin-right: 30px;
+    }
+
+    .cursorNotAllowed{
+        cursor: not-allowed;
+    }
+    .profile-button{
+        border-radius: 50px;
+        color: white;
+        background-color: black ;
+        opacity: 0.7;
+        width: 50%;
+        margin-top: 3%;
+        text-align: center;
+        line-height: 20px;
+        vertical-align: middle;
+        border: 1px black transparent;
+        margin-bottom: 5%;
+        padding: 5px;
+    }
+    
+input{   
+    padding:2% 5%; 
+    text-align: left;
+    background-color: white;
+    opacity: 1;
+    margin-bottom: 10px; 
+    border: transparent;
+}

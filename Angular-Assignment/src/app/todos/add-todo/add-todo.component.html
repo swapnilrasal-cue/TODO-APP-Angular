@@ -1,0 +1,29 @@
+
+<div class="right-section">         
+
+    <form id="addToDo" [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+        <p class="error" id="formError"></p>
+        
+        <label>Todo Name   : </label> <input type="text" placeholder="TODO Name.." id="toDoTitle" formControlName="title"><br>
+        <label>Start Date  : </label> <input id="startDate" type="date" formControlName="startDate" #startDate (click)="disablePreviousDates(startDate.id)"><br>
+        <label>Due Date    : </label> <input id="dueDate" type="date" formControlName="dueDate" #dueDate (click)="disablePreviousDates(dueDate.id)"><br>
+
+        <div class="public">
+            <label>is Public :</label>
+            <input type="checkbox" id="isToDoPublic" formControlName="isPublic">
+        </div>
+
+        <label>Categories :</label>
+        <input type="radio" name="category" value="Home" formControlName="category" [checked]="true">Home
+        <input type="radio" name="category" value="Personal" formControlName="category">Personal
+        <input type="radio" name="category" value="Office" formControlName="category">Office
+        
+
+        <textarea id="description" rows="10" placeholder="Add description here..."
+            formControlName="description"></textarea><br>
+
+        <button type="submit" id="add" class="add" [disabled]="!todoForm.valid" *ngIf="isEditMode == false">Add</button>
+        <button class="update-data" type="button" id="save" *ngIf="isEditMode == true" (click)="onSaveChanges()">Save Changes</button>
+        <button type="reset" class="reset">Reset</button>
+    </form>
+</div>    

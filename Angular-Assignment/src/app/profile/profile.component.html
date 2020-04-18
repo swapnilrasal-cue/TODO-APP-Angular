@@ -1,0 +1,45 @@
+<div class="body-container">
+    
+    <aside class="sidebar">
+        <img id="userPic" class="user-image" [src]="imageUrl" alt="Profile Image">
+
+        <br> <p class="headingPersonalDetail">Personal Details </p> <br>
+
+        <form [formGroup]="editProfile" (ngSubmit)="onEditProfile()" *ngIf="!isFetching">
+
+         <div class="left-side-div">
+            <div class="profileSpan"> Username</div>
+            <div  class="profileSpan">FirstName </div>
+            <div  class="profileSpan"> LastName</div>  
+            <!-- <div  class="profileSpan">Password</div>        -->
+            <div  class="profileSpan">Address</div>    
+            <div  class="profileSpan">Picture</div>  
+            <div  class="profileSpan">Gender</div>  
+
+         </div>
+
+         <div class="right-side-div">
+            <input class="profileSpan2 cursorNotAllowed" type="text" formControlName="email"  > 
+            <input class="profileSpan2 "  type="text" placeholder="First Name" formControlName="firstName">
+            <input class="profileSpan2 "  type="text" placeholder="Last Name" formControlName="lastName">
+            <!-- <input class="profileSpan2 "  type="password" placeholder="Password" formControlName="password"> -->
+            <input  class="profileSpan2 " type="textarea" placeholder="Address" formControlName="address">
+           
+            <input id="profilePicture" class="profileSpan2 " type="file" accept="image/*" formControlName="profileImage"
+            (change)="UploadProfilePicture($event);">
+
+            <input type="radio" name="gender" value="male" formControlName="gender"><label>Male</label>
+            <input type="radio" name="gender" value="female" formControlName="gender"><label>Female</label>
+            <input type="radio" name="gender" value="other" formControlName="gender"><label>Other</label>
+        
+         </div>
+         
+         <div class="clear"></div>
+        
+        <br>
+        <button type="submit" class="profile-button" [disabled]="!editProfile.valid">Save Changes</button>       
+    </form>
+
+    <div style="text-align: center" *ngIf="isFetching">
+        <app-loading-spinner></app-loading-spinner>
+    </div>

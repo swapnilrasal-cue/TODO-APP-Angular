@@ -1,0 +1,29 @@
+
+.page-not-found{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 20px;
+    line-height: 41px;
+}
+button{
+    background-color: #E11B22;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    color: #FFFFFF;
+}
+
+

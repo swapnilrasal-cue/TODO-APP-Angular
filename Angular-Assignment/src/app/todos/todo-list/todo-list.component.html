@@ -1,0 +1,67 @@
+<div class="left-section">
+    <h1 class="todo-heading"> Todo Application</h1>
+
+    <fieldset class="todo-filter-block">
+        <legend style="color: black;display:inline-block">Filter For Todo Task:</legend>
+    <label>Filter By :</label>
+    
+    <select class="filter" name="filters" id="filterBy" (change)="showFurtherFilters()">
+        <option value="select">Select</option>
+        <option value="Categories">Categories</option>
+        <option value="Status">Status</option>
+        <option value="Date">Date</option>
+    </select>
+
+    <select name="filters" id="filterByStatus" [(ngModel)]="filterStatus">
+        <option value="select" selected>Select</option>
+        <option value="Done">isDone</option>
+        <option value="pending">isPending</option>
+    </select>
+
+    <select name="filters" id="filterByCategories" [(ngModel)]="filterCategory">
+        <option value="select" selected>Select</option>
+        <option value="Home">Home</option>
+        <option value="Personal">Personal</option>
+        <option value="Office">Office</option>
+    </select>
+
+    <div class="date-filters" id="filterByDate">
+        <label>From :</label>
+        <input type="date" id="filterStartDate" [(ngModel)]="startDate">
+
+        <label>To :</label>
+        <input type="date" id="filterDueDate" [(ngModel)]="dueDate">
+    </div>
+
+    <div id="operations">
+        <button type="button" id="edit" class="edit" (click)="onEditTodo()">Edit</button>
+        <button type="button" id="delete" class="delete" (click)="onDeleteTodo()">Delete</button>
+        <button type="button" id="markAsDone" class="mark-as-done" (click)="onStatusChange()">Mark as Done</button>
+        <button type="button" class="show-todos" (click)="showAllTodos()">Show todos</button>
+    </div>
+</fieldset>
+
+    <h1 id="noDataFound" *ngIf="todos.length == 0">No Data Found..!!</h1>
+    <table class="todo-table" id="todoTable" *ngIf="todos.length > 0">
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Title</th>
+                <th>Start Date</th>
+                <th>Due Date</th>
+                <th>is Public</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody id="todoBody">
+            <tr app-todo-item [todo]="todo"
+                *ngFor="let todo of todos | categoriesFilter:filterCategory | statusFilter:filterStatus | dateFilter:startDate:dueDate let i=index"
+                (todoSelected)="todoSelected($event)">
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- <div class="clearfix"></div> -->

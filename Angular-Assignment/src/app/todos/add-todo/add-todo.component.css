@@ -1,0 +1,81 @@
+.right-section{
+    width: 35%;
+    float: right;
+    padding: 10px 20px;
+    /* margin-top: 40px; */
+    /* margin-bottom: 40px; */
+    border-left: 2px solid black;
+    font-size: 16px;
+}
+
+.right-section input[type="text"]{
+    width: 100%;
+    height: 42px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.right-section label{
+    margin-right: 10px;
+}
+
+.right-section input[type="date"]{
+    width: 50%;
+    height: 42px;
+    margin-bottom: 20px;
+}
+
+.right-section input[type="text"]{
+    width: 50%;
+    height: 42px;
+    margin-bottom: 20px;
+}
+
+
+.right-section input[type="checkbox"]{
+    height: 17px;
+    width: 40px;
+    vertical-align: middle;
+}
+
+.public{
+    margin-bottom: 20px;
+}
+
+.right-section input[type="radio"]{
+    margin: 0px 5px 20px 20px;
+
+}
+
+.right-section textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.error{
+    width: 100%;
+    font-size: 16px;
+    color: #d93025;
+    margin-bottom: 5px;
+}
+
+.edit, .delete, .mark-as-done, .add, .reset, .update-data{
+    background-color: lightseagreen;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    color: #FFFFFF;
+}
+
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+button:disabled,
+button[disabled]{
+  opacity: 0.65;
+  cursor: not-allowed;
+}

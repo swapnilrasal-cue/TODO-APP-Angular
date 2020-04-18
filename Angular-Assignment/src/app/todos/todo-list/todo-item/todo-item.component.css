@@ -1,0 +1,23 @@
+table{
+    table-layout: fixed;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td{
+    overflow: hidden;
+}
+
+td:nth-of-type(7){
+    width: 50px;
+}
+
+td{
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+    vertical-align: middle;
+}
+

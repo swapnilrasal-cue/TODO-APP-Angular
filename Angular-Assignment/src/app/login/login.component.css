@@ -1,0 +1,94 @@
+
+.form-container{
+    background-color: white;
+    border-radius: 3px;
+    padding: 25px 40px;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    position: relative;
+    color:white;
+    font-size: large;
+    /* opacity: 0.6; */
+}
+
+.heading{
+    text-align: center;
+    font-weight: 500;
+    color: black;
+font-size: 30px;
+margin-bottom: 40px;
+}
+
+.form-container h1{
+    font-size: 20px;
+    text-align: center;
+    color: #363f45;
+    margin-bottom: 24px;
+}
+
+input[type='email'], input[type='password']{
+    width: 100%;
+    font-size: 14px;
+    background-color: #FAFBFC;
+    border: 2px solid #DFE1E6;
+    border-radius: 3px;
+    height: 44px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.login{
+    width: 100%;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #61BD4F;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.login:hover{
+    background-color: #45a049;
+}
+
+hr{
+    margin: 25px 0;
+    border: 0;
+    border-top: 1px solid #cfcdcc;
+}
+
+.signup{
+    color:#363f45;
+}
+
+.signup a{
+    color: #0052CC;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.error{
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    color: #d93025;
+    margin-bottom: 5px;
+}
+
+app-loading-spinner{
+    position: absolute;
+    bottom: 72px;
+    right: 168px;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+button:disabled,
+button[disabled]{
+  opacity: 0.65;
+  cursor: not-allowed;
+}

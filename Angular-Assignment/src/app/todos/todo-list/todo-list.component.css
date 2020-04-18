@@ -1,0 +1,117 @@
+input, textarea , select{
+    border: 1px solid #DFE1E6;
+    border-radius: 3px;
+}
+
+.left-section{
+    width: 65%;
+    float: left;
+    padding: 20px;
+    /* margin-top: 30px; */
+    margin-bottom: 40px;
+}
+
+.left-section h1{
+    font-size: 40px;
+    color:  gray;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.left-section select , .left-section input[type="date"]{
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+table.todo-table{
+    table-layout: fixed;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table.todo-table td{
+    overflow: hidden;
+}
+
+table.todo-table thead th{
+    background-color: #e0e0e0;
+}
+
+table.todo-table td:nth-of-type(7){
+    width: 50px;
+}
+
+.edit, .delete, .mark-as-done, .add, .reset, .update-data, .show-todos{
+    background-color: lightseagreen;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    color: #FFFFFF;
+}
+
+.search{
+    background-color: #E11B22;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: #FFFFFF;
+}
+
+#filterByStatus, #filterByCategories{
+    display: none;
+}
+
+.date-filters{
+    display: none;
+}
+
+thead th , tbody td{
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+    vertical-align: middle;
+}
+
+input[name="selectedItem"]{
+    height: 20px;
+    width: 20px;
+}
+.todo-heading{
+    /* font-size: 40px; */
+    /* padding: 15px 0px;   */
+    color: #9daef5;
+    font-weight: 700;
+   text-shadow: black 4px 4px; 
+   margin-bottom: 25px;
+
+}
+.todo-filter-block{
+    padding: 20px;
+    font-weight: 900;
+    font-style: italic;
+    border: 2px solid black;
+}
+ legend{
+    color: black; 
+    font-size: 25px;
+    width: 26%;
+    font-style: italic;
+}   
+
+ fieldset{
+     border: 2px solid black;
+ }
+.error{
+    width: 100%;
+    font-size: 16px;
+    color: #d93025;
+    margin-bottom: 5px;
+}
